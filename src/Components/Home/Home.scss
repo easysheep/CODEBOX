@@ -1,0 +1,125 @@
+@import "../../App.scss";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home {
+    background-color: #70fc70;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+
+    .hrline1{
+        width: 100%;
+        height: 3px;
+        background-color: black;
+        position: relative;
+        top: 5%;
+    }
+    .hrline2{
+        width: 100%;
+        height: 3px;
+        background-color: black;
+        position: relative;
+        bottom: 5%;
+    }
+    .vrline1{
+        width: 3px;
+        height: 100%;
+        background-color: black;
+        position: absolute;
+        left: 5%;
+
+    }
+    .vrline2{
+        width: 3px;
+        height: 100%;
+        background-color: black;
+        position: absolute;
+        right: 5%;
+
+    }
+
+    .heading {
+        display: flex;
+        height: 50%;
+        font-family: "Abril Fatface", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 50px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+
+        
+        .heading-part {
+            display: flex;
+            flex-direction: row;
+        }
+        @include mobile{
+            flex-direction: column;
+        }
+
+
+        .h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5px;
+            cursor: pointer;
+
+
+        }
+        h1:hover {
+            transform: rotate(10deg); /* Apply rotation transform on hover */
+          }
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: center;
+        height: 50%;
+        gap: 20px;
+        position: relative;
+        left: -5%;
+        font-family: "Madimi One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        @include mobile{
+            align-items: flex-start;
+        }
+        
+
+        .btn {
+            width: 20%;
+            background: linear-gradient(to left,transparent 50%, black 50%, );
+            background-size: 200% 100%;
+            /* Double the size of the background */
+            background-position: right bottom;
+            /* Start position at the right bottom */
+            transition: background-position 0.6s ease;
+            /* Transition background position */
+            border: 0;
+            padding: 5px 8px;
+            font-size: 30px;
+            cursor: pointer ;
+            text-decoration: none !important; 
+            outline: none;
+            color: inherit;
+
+        }
+
+        .btn:hover {
+            background-position: left bottom;
+            /* Move background position to left bottom on hover */
+            color: white;
+
+        }
+    }
+}

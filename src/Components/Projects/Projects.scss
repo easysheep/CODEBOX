@@ -1,0 +1,108 @@
+@import "../../App.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.project {
+  background-color: #70fc70;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .hrline1 {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    top: 5%;
+  }
+
+  .hrline2 {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    bottom: 5%;
+  }
+
+  .vrline1 {
+    width: 3px;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    left: 5%;
+    top: 0;
+  }
+
+  .vrline2 {
+    width: 3px;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    right: 5%;
+    top: 0;
+  }
+
+  .head {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-left: 10%;
+    margin-bottom: 100px;
+    width: 80vw;
+
+    .no-projects-message {
+      font-family: "Jersey 25", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 100px;
+    }
+
+    .projectfolder {
+      background-color: black;
+      color: white;
+      height: 15vh;
+      width: 15%;
+      gap: 10px;
+      display: flex;
+      flex-direction: column;
+      padding: 8px 8px;
+      border-radius: 8px;
+      font-family: "Jersey 25", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: xx-large;
+      justify-content: space-between;
+
+      @include large {
+        min-width: 200px;
+      }
+
+      .buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        justify-content: flex-end;
+        cursor: pointer;
+      }
+    }
+  }
+}
