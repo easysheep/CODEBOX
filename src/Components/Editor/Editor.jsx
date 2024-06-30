@@ -133,7 +133,7 @@ const Editor = ({ HTML, CSS, JS }) => {
 
         <div className="rightc">
           <div className="iframe-container">
-            <div className="iframe-title">Output</div>
+            <div className="iframe-title">OUTPUT</div>
             <iframe
               srcDoc={srcDoc}
               title="output"
